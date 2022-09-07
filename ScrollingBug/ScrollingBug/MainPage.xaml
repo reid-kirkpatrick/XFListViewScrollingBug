@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="ScrollingBug.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="_mainPage">
+	<ListView HasUnevenRows="True" ItemsSource="{Binding Items, Source={x:Reference _mainPage}}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<ContentView Padding="16">
+						<Label Text="{Binding}" />
+					</ContentView>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+
+</ContentPage>
